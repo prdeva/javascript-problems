@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // deduplication
+        const array = [1, 2, 2, 3, 4, 4, 5];
+        const uniqueArray=[...new Set(array)];
+        console.log(uniqueArray);
+//         const array = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueArray = [...new Set(array)];
+// console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
+
+//removing array element by index number;
+ 
+const array2=[1,2,3,4,5,6,7];
+const indexToRemove=2;
+const newArray=array.filter((_,index)=>index !==indexToRemove);
+console.log(newArray);
+
+//. Converting Array of object
+let users = [
+  { id: 95, name: "Kumaran", age: 21 },
+  { id: 102, name: "Praveen", age: 21 },
+  { id: 64, name: "Deva", age: 21 }
+];
+
+let names = users.map(users => users.name);
+console.log(names);
+// Finding the longest string in an array of strings
+
+ const strings=["smaller","longer","mid-smaller","mid-larger"];
+ let longest="";
+ for(let i=0;i<strings.length;i++){
+    if(strings[i].length>longest.length){
+        longest=strings[i];
+    }
+ }
+ console.log(longest);
+
+ // Rotating Array
+
+
+let array3 = [1, 2, 3, 4, 5];
+let rotate_times=3;
+let rotate_Array = rotate(array, rotate_times);
+
+console.log(rotate_Array);
+
+function rotate(array, n) {
+  n = n % array.length;
+  return array.slice(n).concat(array.slice(0, n));
+}
+
+
+
+    </script>
+</body>
+</html>
